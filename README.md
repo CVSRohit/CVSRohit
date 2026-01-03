@@ -29,15 +29,6 @@
 
 ---
 
-## 💼 Experience
-
-- **MBA** - Rotman School of Management (2022-2024)
-- **Stealth Startup Founder** - Building innovative solutions
-- **ZS GENIUS Award Winner** - Recognized for technical excellence
-- **Based in Toronto** - Available for remote and on-site engagements
-
----
-
 ## 🛠️ Tech Stack
 
 ### Cloud & Infrastructure
@@ -81,30 +72,6 @@
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=CVSRohit&theme=tokyonight&hide_border=true&background=1A1B27&ring=3B82F6&fire=3B82F6&currStreakLabel=A0AEC0)
 
 </div>
-
----
-
-## 🏆 Featured Projects
-
-### 📈 Neural Trader
-AI-powered trading news agent with ML-based analysis
-- **Tech:** Python, AI/ML, Trading APIs
-- **Impact:** 14 GitHub stars, Production ready
-
-### 💰 InvestorsPlaybook
-Financial analytics and investment tracking platform
-- **Tech:** React, TypeScript, Financial APIs
-- **Category:** FinTech
-
-### 🎬 Indian Cinema Chatbot
-AI chatbot for Indian cinema information and recommendations
-- **Tech:** Python, NLP, AI/ML
-- **Category:** AI/ML
-
-### 🤖 Dr. Tony the Technician
-AI-powered technical support assistant
-- **Tech:** Python, AI/ML, NLP
-- **Category:** AI Solutions
 
 ---
 
