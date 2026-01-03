@@ -61,19 +61,6 @@
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=CVSRohit&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1A1B27&title_color=3B82F6&icon_color=3B82F6&text_color=A0AEC0" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=CVSRohit&theme=tokyonight&hide_border=true&background=1A1B27&ring=3B82F6&fire=3B82F6&currStreakLabel=A0AEC0" />
-</p>
-
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CVSRohit&layout=compact&theme=tokyonight&hide_border=true&bg_color=1A1B27&title_color=3B82F6&text_color=A0AEC0" />
-</p>
-
----
-
 ## 📫 Let's Connect
 
 <div align="center">
