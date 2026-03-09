@@ -2,7 +2,7 @@
 
 # Rohit Challa
 
-### AI Researcher · Graph ML · Knowledge Systems
+### AI · Graph ML · Knowledge Systems
 
 <p align="center">
   <i>Introduced the Anti-GraphRAG paradigm — surfacing what's absent in a knowledge graph, not just what's present.<br/>
