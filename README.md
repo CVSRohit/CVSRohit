@@ -1,86 +1,93 @@
 <div align="center">
 
-# 👋 Rohit Challa
+# Rohit Challa
 
-### Technical Fixer | Solutions Architect | Problem Solver
+### AI Researcher · Graph ML · Knowledge Systems
 
 <p align="center">
-  <i>I help tech companies deliver and maintain their technology.<br/>
-  From fixing broken systems to building scalable solutions—I get things done.<br/>
-  Fast, reliable, and battle-tested.</i>
+  <i>Introduced the Anti-GraphRAG paradigm — surfacing what's absent in a knowledge graph, not just what's present.<br/>
+  Working on the intersection of graph machine learning, contrastive learning, and applied decision intelligence.</i>
 </p>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-rohitchalla.com-3B82F6?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rohitchalla.com)
+[![void-graph](https://img.shields.io/badge/void--graph-Anti--GraphRAG-10b981?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CVSRohit/void-graph)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rohit_Challa-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rohitchalla)
-[![Calendly](https://img.shields.io/badge/Book_a_Call-Calendly-00A2FF?style=for-the-badge&logo=calendly&logoColor=white)](https://calendly.com/cvsrohit/rohitchalla-com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-rohitchalla.com-3B82F6?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rohitchalla.com)
 
 </div>
 
 ---
 
-## 🚀 What I Do
+## Anti-GraphRAG · void-graph
 
-- **🔧 System Rescue & Recovery** - Fix broken systems, resolve technical debt, and get stuck projects back on track
-- **⚡ Rapid Delivery** - Ship features fast without compromising quality
-- **🏗️ Architecture & Scale** - Design and build scalable systems that handle growth from day one
-- **🤖 AI Integration** - Implement AI and computer vision solutions that work in production
-- **🛠️ DevOps & Infrastructure** - Set up reliable CI/CD, monitoring, and infrastructure
-- **📊 Technical Leadership** - Guide teams, make critical decisions, and keep projects on track
+> *Where GraphRAG asks "what's connected?" — Anti-GraphRAG asks "what's missing, and does it matter?"*
+
+I introduced **Anti-GraphRAG**: an inversion of the standard GraphRAG retrieval paradigm that surfaces *absent* edges in a knowledge graph rather than present ones. The core insight is that meaningful absence — a missing drug-target interaction, an undocumented threat actor technique, an unlinked regulatory obligation — often carries more signal than what the graph already contains.
+
+**How it works:**
+1. Construct a domain knowledge graph and freeze it at time T
+2. Train ComplEx embeddings on the frozen graph (link existence)
+3. Apply a Contrastive Void Network (CVN) — trained on temporal ground truth — to rank absent edges by *significance*, not just likelihood
+4. Validate: check which predicted voids were later confirmed by real-world data
+
+**Results on open datasets:**
+
+| Domain | Dataset | Ground Truth | P@100 |
+|--------|---------|--------------|-------|
+| Biomedical | Hetionet + STRING v12 | Protein interactions added post-cutoff | **0.94** |
+| Threat Intelligence | MITRE ATT&CK Enterprise | ATT&CK edges added post-cutoff | **0.86** |
+
+The temporal validation method — freeze, predict, wait, verify — is what separates significance from noise. Any system can score candidate edges; this one is calibrated against what *actually mattered later*.
+
+**[→ void-graph on GitHub](https://github.com/CVSRohit/void-graph)** · Open source · Validated on real-world knowledge graphs
 
 ---
 
-## 🛠️ Tech Stack
+## AI Work
 
-### Cloud & Infrastructure
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+### Knowledge Graph Embeddings
+Trained and evaluated KGE models (ComplEx, RotatE) for link prediction on biomedical and cybersecurity graphs. Extended standard KGE pipelines with contrastive significance heads and temporal holdout validation.
 
-### Languages & Frameworks
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+### Contrastive Learning for Absence
+Developed the CVN (Contrastive Void Network) — an InfoNCE-trained head on frozen KGE embeddings that learns to distinguish structurally significant voids from random non-edges. Applied to Hetionet (47K nodes, 2.25M edges) and MITRE ATT&CK (1,757 nodes, 20K edges).
+
+### Applied Domains
+- **Biomedical**: Drug-target, gene-disease, compound-pathway void detection
+- **Cybersecurity**: Threat actor → technique gap prediction; mitigation coverage analysis
+- **[Open KG tooling](https://github.com/CVSRohit/open-knowledge-graphs)**: Knowledge graph construction and evaluation utilities
+
+### Other AI Projects
+- **[ai-data-analyst](https://github.com/CVSRohit/ai-data-analyst)** — Natural language interface for structured data analysis
+- **[EvoPrompt](https://github.com/CVSRohit/EvoPrompt)** — Evolutionary prompt optimization
+- **[FlyPyAgents](https://github.com/CVSRohit/FlyPyAgents)** — Lightweight Python agent framework
+- **[PodcastGen](https://github.com/CVSRohit/PodcastGen)** — LLM-powered podcast generation pipeline
+
+---
+
+## Stack
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-
-### Databases & Tools
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
-
-### AI/ML
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 ---
-
-## 📫 Let's Connect
 
 <div align="center">
 
-**Need help with a technical challenge?**
-
-Whether your system is broken, your team is stuck, or your deadline seems impossible—let's talk.
+**Interested in knowledge graphs, contrastive learning, or structured absence detection?**
 
 [![Book a Call](https://img.shields.io/badge/📅_Schedule_a_Chat-3B82F6?style=for-the-badge)](https://calendly.com/cvsrohit/rohitchalla-com)
-[![Portfolio](https://img.shields.io/badge/🌐_View_Portfolio-1A1B27?style=for-the-badge)](https://rohitchalla.com)
-[![LinkedIn](https://img.shields.io/badge/💼_Connect_on_LinkedIn-0077B5?style=for-the-badge)](https://linkedin.com/in/rohitchalla)
+[![Portfolio](https://img.shields.io/badge/🌐_rohitchalla.com-1A1B27?style=for-the-badge)](https://rohitchalla.com)
+[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0077B5?style=for-the-badge)](https://linkedin.com/in/rohitchalla)
 
-</div>
-
----
-
-<div align="center">
-
-### 💡 "No fluff, no endless meetings—just results."
-
-![Profile Views](https://komarev.com/ghpvc/?username=CVSRohit&color=3B82F6&style=flat-square)
+![Profile Views](https://komarev.com/ghpvc/?username=CVSRohit&color=10b981&style=flat-square)
 
 </div>
