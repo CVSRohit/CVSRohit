@@ -2,14 +2,14 @@
 
 # Rohit Challa
 
-### AI · Graph ML · Knowledge Systems
+### AI systems · Security · Robotics · Product
 
 <p align="center">
-  <i>Introduced the Anti-GraphRAG paradigm — surfacing what's absent in a knowledge graph, not just what's present.<br/>
-  Working on the intersection of graph machine learning, contrastive learning, and applied decision intelligence.</i>
+<i>I build systems that have to prove they work — models validated against what actually happened,<br/>
+robots that refuse to report numbers from unmeasured parameters, and red-team findings<br/>
+that ship with the transcript that produced them.</i>
 </p>
 
-[![void-graph](https://img.shields.io/badge/void--graph-Anti--GraphRAG-10b981?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CVSRohit/void-graph)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rohit_Challa-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rohitchalla)
 [![Portfolio](https://img.shields.io/badge/Portfolio-rohitchalla.com-3B82F6?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rohitchalla.com)
 
@@ -17,77 +17,132 @@
 
 ---
 
-## Anti-GraphRAG · void-graph
+Most of my work sits where a model meets something that can hurt you if it's wrong — a
+vehicle, a production database, a security control, a customer's bill. That constraint
+shapes how I build. The through-line across everything below is the same: **the system
+carries its own evidence.**
 
-> *Where GraphRAG asks "what's connected?" — Anti-GraphRAG asks "what's missing, and does it matter?"*
-
-I introduced **Anti-GraphRAG**: an inversion of the standard GraphRAG retrieval paradigm that surfaces *absent* edges in a knowledge graph rather than present ones. The core insight is that meaningful absence — a missing drug-target interaction, an undocumented threat actor technique, an unlinked regulatory obligation — often carries more signal than what the graph already contains.
-
-**How it works:**
-1. Construct a domain knowledge graph and freeze it at time T
-2. Train ComplEx embeddings on the frozen graph (link existence)
-3. Apply a Contrastive Void Network (CVN) — trained on temporal ground truth — to rank absent edges by *significance*, not just likelihood
-4. Validate: check which predicted voids were later confirmed by real-world data
-
-**Results on open datasets:**
-
-| Domain | Dataset | Ground Truth | P@100 |
-|--------|---------|--------------|-------|
-| Biomedical | Hetionet + STRING v12 | Protein interactions added post-cutoff | **0.94** |
-| Threat Intelligence | MITRE ATT&CK Enterprise | ATT&CK edges added post-cutoff | **0.86** |
-
-The temporal validation method — freeze, predict, wait, verify — is what separates significance from noise. Any system can score candidate edges; this one is calibrated against what *actually mattered later*.
-
-**[→ void-graph on GitHub](https://github.com/CVSRohit/void-graph)** · Open source · Validated on real-world knowledge graphs
+I work across four areas, and the interesting problems keep turning up where they overlap.
 
 ---
 
-## AI Work
+## 🧠 AI & Machine Learning
 
-### Knowledge Graph Embeddings
-Trained and evaluated KGE models (ComplEx, RotatE) for link prediction on biomedical and cybersecurity graphs. Extended standard KGE pipelines with contrastive significance heads and temporal holdout validation.
+**Knowledge graph embeddings and learning from absence.** I work on *Anti-GraphRAG* — an
+inversion of standard graph retrieval that surfaces the edges a knowledge graph is
+*missing* rather than the ones it contains. A missing protein interaction, an undocumented
+adversary technique, an unlinked regulatory obligation: meaningful absence often carries
+more signal than presence.
 
-### Contrastive Learning for Absence
-Developed the CVN (Contrastive Void Network) — an InfoNCE-trained head on frozen KGE embeddings that learns to distinguish structurally significant voids from random non-edges. Applied to Hetionet (47K nodes, 2.25M edges) and MITRE ATT&CK (1,757 nodes, 20K edges).
+The method: freeze a domain graph at time *T*, train ComplEx embeddings on it, then apply a
+contrastive head (InfoNCE over frozen embeddings) that ranks absent edges by *significance*
+rather than mere likelihood — and validate by checking which predicted voids were confirmed
+by real-world data published after the cutoff.
 
-### Applied Domains
-- **Biomedical**: Drug-target, gene-disease, compound-pathway void detection
-- **Cybersecurity**: Threat actor → technique gap prediction; mitigation coverage analysis
-- **[Open KG tooling](https://github.com/CVSRohit/open-knowledge-graphs)**: Knowledge graph construction and evaluation utilities
+| Domain | Graph | Validated against | P@100 |
+|---|---|---|---|
+| Biomedical | Hetionet + STRING v12 · 47K nodes, 2.25M edges | Interactions added post-cutoff | **0.94** |
+| Threat intelligence | MITRE ATT&CK Enterprise · 1,757 nodes, 20K edges | ATT&CK edges added post-cutoff | **0.86** |
 
-### Other AI Projects
-- **[ai-data-analyst](https://github.com/CVSRohit/ai-data-analyst)** — Natural language interface for structured data analysis
-- **[EvoPrompt](https://github.com/CVSRohit/EvoPrompt)** — Evolutionary prompt optimization
-- **[FlyPyAgents](https://github.com/CVSRohit/FlyPyAgents)** — Lightweight Python agent framework
-- **[PodcastGen](https://github.com/CVSRohit/PodcastGen)** — LLM-powered podcast generation pipeline
+Anything can score candidate edges. Freeze → predict → wait → verify is what separates
+significance from noise, and it's the part I care about.
+
+**Applied LLM and agent systems.** Evolutionary prompt optimization with a parallel A/B
+testing harness (published to npm). An MCP-compatible memory service with a typed REST API
+and pluggable object storage. Natural-language interfaces over structured data. A streaming
+rich-text renderer for model output, sanitized by default, published as a React library.
+Multi-agent pipelines deployed as containerized APIs.
+
+`PyTorch` · `ComplEx / RotatE` · `contrastive learning` · `Claude Agent SDK` · `MCP` · `FastAPI`
 
 ---
 
-## Stack
+## 🛡️ Security & AI Red Teaming
 
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+I designed and run an AI red team practice covering both directions of the problem — and
+they are genuinely different tests:
+
+**Inward — can your own AI be turned against you?** Seven layers, from the model and
+provider terms through prompt and context injection, the agent harness, the tool/MCP layer,
+RAG and PII boundaries, agent identity and privilege, and governance. Mapped to the OWASP
+Top 10 for LLM Applications, the OWASP Top 10 for Agentic Applications, the OWASP MCP Top
+10, NIST AI RMF and ISO 42001.
+
+What actually breaks, in practice: unpinned models that silently change behaviour;
+payloads hidden in PDFs and tickets an assistant later reads; approval gates that exist but
+are trivially satisfied; MCP servers with no auth and no one watching the update path; one
+over-permissioned token shared by every agent, with no revocation path.
+
+**Outward — can you survive an attacker using AI against you?** Replicating the AI-enabled
+kill chain: automated reconnaissance, synthetic pretexting, adaptive access that rewrites
+itself after refusal, agentic lateral movement, targeted extraction. Including the crossover
+case clients remember — using their own public-facing assistant as the initial access vector.
+Measured against detection and response, because most environments generate the alert and
+nobody reads it.
+
+Every engagement runs on written authorization with named approvers, scoped windows, and
+proof-of-compliance stop conditions. Findings ship as an evidence pack — the exact prompt,
+transcript or recording that produced each one, reproducible by the client's own team —
+mapped to control frameworks so it drops straight into insurer and enterprise
+questionnaires.
+
+I hold my own infrastructure to the same standard: deny-by-default row-level security on
+every table, a DDL event trigger that auto-enables it on anything created later so the
+posture can't drift, `SECURITY DEFINER` functions with pinned `search_path`, and no
+data-plane grants to anonymous roles.
+
+`OWASP LLM / Agentic / MCP Top 10` · `NIST AI RMF` · `ISO 42001` · `PIPEDA` · `adversarial simulation`
+
+---
+
+## 🔧 Hardware & Robotics
+
+**Uncrewed ground systems.** Autonomy stack for a tactical cargo UGV — ROS 2 Humble on a
+Jetson Orin Nano, 2D LiDAR and camera fused for perception, brushed-motor drivetrain over
+an ESP32 controller with a hardware E-stop. A scenario harness runs waypoint following,
+obstacle approach, GNSS-denied navigation and link-loss return-to-home across both a
+kinematic engine and Gazebo, deterministic given a seed.
+
+The part I'd point at: the harness **refuses to report quotable results while any vehicle
+parameter is still a placeholder.** Wheelbase, centre-of-mass and friction coefficients that
+haven't been physically measured force a `parameters_measured = false` flag, enforced in
+code, not in a comment. Simulation output that can't be traced to a measurement isn't a
+result — it's a rendering. Built to a defence innovation challenge's TRL and evidence
+requirements.
+
+**Embedded and physical interfaces.** A hardware remote for AI coding agents — ESP32 with a
+display and approve/deny buttons, custom firmware, a WebSocket relay, and a 3D-printed
+enclosure I modelled in OpenSCAD. It makes the approval step a physical object you have to
+reach for, which is a different safety property than a dialog box. Separately, a working
+prompt → model → STL → sliced 3MF → printer pipeline, with the firmware quirks documented
+so it reproduces on someone else's machine.
+
+`ROS 2` · `Jetson Orin` · `LiDAR + camera fusion` · `ESP32 / PlatformIO` · `Gazebo` · `OpenSCAD` · `C++`
+
+---
+
+## 💻 Software & Product
+
+I ship the whole thing, not a notebook. Production Next.js on Vercel; Postgres with
+row-level security designed before the first insert; Stripe billing with verified webhooks;
+FastAPI services containerized and deployed; object storage, auth, and the boring
+operational parts that decide whether any of the above survives contact with users.
+
+Recent builds include a conversational form platform with an embeddable widget and usage
+metering, commercial-intelligence tooling over messy source data, and computer-vision
+pipelines for environmental monitoring taken from satellite imagery through to a decision
+product.
+
+`TypeScript` · `Next.js` · `Python` · `FastAPI` · `PostgreSQL / Supabase` · `Docker` · `Vercel` · `Fly.io` · `GCP` · `AWS`
 
 ---
 
 <div align="center">
 
-**Interested in knowledge graphs, contrastive learning, or structured absence detection?**
+**Working on knowledge graphs, agent security, or autonomy — and want someone who'll show you the evidence?**
 
 [![Book a Call](https://img.shields.io/badge/📅_Schedule_a_Chat-3B82F6?style=for-the-badge)](https://calendly.com/cvsrohit/rohitchalla-com)
 [![Portfolio](https://img.shields.io/badge/🌐_rohitchalla.com-1A1B27?style=for-the-badge)](https://rohitchalla.com)
 [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0077B5?style=for-the-badge)](https://linkedin.com/in/rohitchalla)
-
-![Profile Views](https://komarev.com/ghpvc/?username=CVSRohit&color=10b981&style=flat-square)
 
 </div>
