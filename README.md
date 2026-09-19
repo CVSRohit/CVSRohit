@@ -26,7 +26,7 @@ I work across five areas, and the interesting problems keep turning up where the
 
 ---
 
-## 🧠 AI & Machine Learning
+## AI & Machine Learning
 
 **Knowledge graph embeddings and learning from absence.** I build *Anti-GraphRAG* — an
 inversion of standard graph retrieval that surfaces the edges a knowledge graph is
@@ -57,7 +57,7 @@ Multi-agent pipelines deployed as containerized APIs.
 
 ---
 
-## 🛡️ Security & AI Red Teaming
+## Security & AI Red Teaming
 
 I designed and run an AI red team practice covering both directions of the problem — and
 they are genuinely different tests:
@@ -95,7 +95,7 @@ data-plane grants to anonymous roles.
 
 ---
 
-## 👁️ Computer Vision & Remote Sensing
+## Computer Vision & Remote Sensing
 
 **Pixels to decisions — from orbit, from a robot, and from a production line.**
 
@@ -114,7 +114,7 @@ that does not slow down for your inference budget.
 
 ---
 
-## 🔧 Hardware & Robotics
+## Hardware & Robotics
 
 **Uncrewed ground systems.** Autonomy stack for a tactical cargo UGV — ROS 2 Humble on a
 Jetson Orin Nano, 2D LiDAR and camera fused for perception, brushed-motor drivetrain over
@@ -140,7 +140,7 @@ so it reproduces on someone else's machine.
 
 ---
 
-## 💻 Software & Product
+## Software & Product
 
 I ship the whole thing, not a notebook. Production Next.js on Vercel; Postgres with
 row-level security designed before the first insert; Stripe billing with verified webhooks;
@@ -160,8 +160,8 @@ product.
 
 **Working on knowledge graphs, agent security, or autonomy — and want someone who'll show you the evidence?**
 
-[![Book a Call](https://img.shields.io/badge/📅_Schedule_a_Chat-FF6B35?style=for-the-badge)](https://calendly.com/cvsrohit/rohitchalla-com)
-[![Portfolio](https://img.shields.io/badge/🌐_rohitchalla.com-1A1B27?style=for-the-badge)](https://rohitchalla.com)
-[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0077B5?style=for-the-badge)](https://linkedin.com/in/rohitchalla)
+[![Book a Call](https://img.shields.io/badge/Schedule_a_Chat-FF6B35?style=for-the-badge)](https://calendly.com/cvsrohit/rohitchalla-com)
+[![Portfolio](https://img.shields.io/badge/rohitchalla.com-1A1B27?style=for-the-badge)](https://rohitchalla.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge)](https://linkedin.com/in/rohitchalla)
 
 </div>
