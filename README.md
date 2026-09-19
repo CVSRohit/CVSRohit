@@ -2,7 +2,7 @@
 
 # Rohit Challa
 
-### AI systems · Security · Robotics · Product
+### AI systems · Security · Computer Vision · Robotics · Product
 
 <p align="center">
 <i>I build systems that have to prove they work — models validated against what actually happened,<br/>
@@ -11,7 +11,7 @@ that ship with the transcript that produced them.</i>
 </p>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rohit_Challa-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rohitchalla)
-[![Portfolio](https://img.shields.io/badge/Portfolio-rohitchalla.com-3B82F6?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rohitchalla.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-rohitchalla.com-FF6B35?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rohitchalla.com)
 
 </div>
 
@@ -22,13 +22,13 @@ vehicle, a production database, a security control, a customer's bill. That cons
 shapes how I build. The through-line across everything below is the same: **the system
 carries its own evidence.**
 
-I work across four areas, and the interesting problems keep turning up where they overlap.
+I work across five areas, and the interesting problems keep turning up where they overlap.
 
 ---
 
 ## 🧠 AI & Machine Learning
 
-**Knowledge graph embeddings and learning from absence.** I work on *Anti-GraphRAG* — an
+**Knowledge graph embeddings and learning from absence.** I build *Anti-GraphRAG* — an
 inversion of standard graph retrieval that surfaces the edges a knowledge graph is
 *missing* rather than the ones it contains. A missing protein interaction, an undocumented
 adversary technique, an unlinked regulatory obligation: meaningful absence often carries
@@ -75,8 +75,8 @@ over-permissioned token shared by every agent, with no revocation path.
 
 **Outward — can you survive an attacker using AI against you?** Replicating the AI-enabled
 kill chain: automated reconnaissance, synthetic pretexting, adaptive access that rewrites
-itself after refusal, agentic lateral movement, targeted extraction. Including the crossover
-case clients remember — using their own public-facing assistant as the initial access vector.
+itself after refusal, agentic lateral movement, targeted extraction. Including the case where
+the two sides meet — using an organization's own public-facing assistant as the entry point.
 Measured against detection and response, because most environments generate the alert and
 nobody reads it.
 
@@ -92,6 +92,25 @@ posture can't drift, `SECURITY DEFINER` functions with pinned `search_path`, and
 data-plane grants to anonymous roles.
 
 `OWASP LLM / Agentic / MCP Top 10` · `NIST AI RMF` · `ISO 42001` · `PIPEDA` · `adversarial simulation`
+
+---
+
+## 👁️ Computer Vision & Remote Sensing
+
+**Pixels to decisions — from orbit, from a robot, and from a production line.**
+
+Satellite and aerial imagery turned into decision products for environmental
+monitoring: fuel-layer characterization, hazard and spread modelling, and risk
+surfaces built for the people who have to act on them rather than for a leaderboard.
+
+On the robotics side, LiDAR and camera fused for obstacle detection and range
+estimation — with a calibration step that has to run before any range figure is
+allowed to mean anything, and evidence-grade logging on every bench run so a
+number can always be traced back to the frame it came from. Also inspection and
+quality grading on moving production lines, where the constraint is a conveyor
+that does not slow down for your inference budget.
+
+`PyTorch` · `OpenCV` · `Satellite & aerial imagery` · `Sensor fusion` · `Object detection` · `Geospatial`
 
 ---
 
@@ -141,7 +160,7 @@ product.
 
 **Working on knowledge graphs, agent security, or autonomy — and want someone who'll show you the evidence?**
 
-[![Book a Call](https://img.shields.io/badge/📅_Schedule_a_Chat-3B82F6?style=for-the-badge)](https://calendly.com/cvsrohit/rohitchalla-com)
+[![Book a Call](https://img.shields.io/badge/📅_Schedule_a_Chat-FF6B35?style=for-the-badge)](https://calendly.com/cvsrohit/rohitchalla-com)
 [![Portfolio](https://img.shields.io/badge/🌐_rohitchalla.com-1A1B27?style=for-the-badge)](https://rohitchalla.com)
 [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0077B5?style=for-the-badge)](https://linkedin.com/in/rohitchalla)
 
