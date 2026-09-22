@@ -28,30 +28,22 @@ I work across five areas, and the interesting problems keep turning up where the
 
 ## AI & Machine Learning
 
-**Knowledge graph embeddings and learning from absence.** I build *Anti-GraphRAG* — an
-inversion of standard graph retrieval that surfaces the edges a knowledge graph is
-*missing* rather than the ones it contains. A missing protein interaction, an undocumented
-adversary technique, an unlinked regulatory obligation: meaningful absence often carries
-more signal than presence.
-
-The method: freeze a domain graph at time *T*, train ComplEx embeddings on it, then apply a
-contrastive head (InfoNCE over frozen embeddings) that ranks absent edges by *significance*
-rather than mere likelihood — and validate by checking which predicted voids were confirmed
-by real-world data published after the cutoff.
-
-| Domain | Graph | Validated against | P@100 |
-|---|---|---|---|
-| Biomedical | Hetionet + STRING v12 · 47K nodes, 2.25M edges | Interactions added post-cutoff | **0.94** |
-| Threat intelligence | MITRE ATT&CK Enterprise · 1,757 nodes, 20K edges | ATT&CK edges added post-cutoff | **0.86** |
-
-Anything can score candidate edges. Freeze → predict → wait → verify is what separates
-significance from noise, and it's the part I care about.
-
 **Applied LLM and agent systems.** Evolutionary prompt optimization with a parallel A/B
-testing harness (published to npm). An MCP-compatible memory service with a typed REST API
+testing harness, published to npm. An MCP-compatible memory service with a typed REST API
 and pluggable object storage. Natural-language interfaces over structured data. A streaming
 rich-text renderer for model output, sanitized by default, published as a React library.
-Multi-agent pipelines deployed as containerized APIs.
+Multi-agent pipelines deployed as containerized APIs, and agent harnesses wired to real
+tools rather than demos.
+
+**Knowledge graphs, and learning from absence.** I build *Anti-GraphRAG* — an inversion of
+standard graph retrieval that surfaces the edges a graph is *missing* rather than the ones
+it already contains. Freeze the graph at time *T*, train ComplEx embeddings, rank absent
+edges by significance with a contrastive head, then validate against what actually appeared
+after the cutoff: **0.94 P@100** on biomedical data (Hetionet + STRING v12, 47K nodes),
+**0.86** on MITRE ATT&CK.
+
+Anything can score candidate edges. Freeze, predict, wait, verify is what separates
+significance from noise, and it's the part I care about.
 
 `PyTorch` · `ComplEx / RotatE` · `contrastive learning` · `Claude Agent SDK` · `MCP` · `FastAPI`
 
