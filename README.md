@@ -11,7 +11,7 @@ that ship with the transcript that produced them.</i>
 </p>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rohit_Challa-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rohitchalla)
-[![Portfolio](https://img.shields.io/badge/Portfolio-rohitchalla.com-FF3B41?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rohitchalla.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-rohitchalla.com-FF0000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rohitchalla.com)
 
 </div>
 
@@ -152,7 +152,7 @@ product.
 
 **Working on knowledge graphs, agent security, or autonomy — and want someone who'll show you the evidence?**
 
-[![Book a Call](https://img.shields.io/badge/Schedule_a_Chat-FF3B41?style=for-the-badge)](https://calendly.com/cvsrohit/rohitchalla-com)
+[![Book a Call](https://img.shields.io/badge/Schedule_a_Chat-FF0000?style=for-the-badge)](https://calendly.com/cvsrohit/rohitchalla-com)
 [![Portfolio](https://img.shields.io/badge/rohitchalla.com-1A1B27?style=for-the-badge)](https://rohitchalla.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge)](https://linkedin.com/in/rohitchalla)
 
